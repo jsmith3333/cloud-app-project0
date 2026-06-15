@@ -1,0 +1,4 @@
+node_modules/          # Prevents dependency folder from being tracked
+.env                   # Secures environment variables
+.DS_Store              # Excludes macOS system files
+*.log                  # Prevents log file tracking

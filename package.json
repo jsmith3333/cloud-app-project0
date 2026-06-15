@@ -1,0 +1,21 @@
+{
+  "name": "cloud-app-project",
+  "version": "1.0.0",
+  "description": "Cloud Application Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Walter Malie",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.18.1",
+    "mongoose": "^9.3.1"
+  }
+}

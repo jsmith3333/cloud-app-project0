@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Application Project - Walter Malie</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f9; }
+        h1 { color: #333; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        .task-card { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .task-title { font-weight: bold; font-size: 1.2em; color: #0056b3; }
+        .status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; margin-top: 5px; }
+        .completed { background-color: #d4edda; color: #155724; }
+        .pending { background-color: #fff3cd; color: #856404; }
+        footer { margin-top: 30px; font-size: 0.9em; color: #666; text-align: center; }
+    </style>
+</head>
+<body>
+    <h1>Cloud Deployment Project</h1>
+    <p>This application demonstrates a successful integration with MongoDB Atlas as part of the ICTCLD507 assessment.</p>
+
+    <h2>Project Tasks (Fetched from Database)</h2>
+    <% if (tasks && tasks.length > 0) { %>
+        <% tasks.forEach(task => { %>
+            <div class="task-card">
+                <div class="task-title"><%= task.title %></div>
+                <div class="task-desc"><%= task.description %></div>
+                <span class="status <%= task.completed ? 'completed' : 'pending' %>">
+                    <%= task.completed ? 'Completed' : 'Pending' %>
+                </span>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>No tasks found. Please run the seed script to populate the database.</p>
+    <% } %>
+
+    <footer>
+        &copy; 2026 Walter Malie | Student ID: 14213616
+    </footer>
+</body>
+</html>
